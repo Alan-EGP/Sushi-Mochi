@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sushi Mochi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- VENTANA DE INICIO DE SESIÓN -->
+  <div id="login-fondo" class="login-fondo">
+    <div id="login-ventana" class="login-ventana" role="dialog" aria-modal="true" aria-labelledby="login-titulo">
+      <h2 id="login-titulo">Inicia sesión</h2>
+      <p class="login-texto">Entra para guardar tus combos favoritos.</p>
+
+      <form id="login-form">
+        <label for="login-usuario">Usuario</label>
+        <input type="text" id="login-usuario" name="usuario" autocomplete="off">
+
+        <label for="login-clave">Contraseña</label>
+        <input type="password" id="login-clave" name="clave" autocomplete="off">
+
+        <button type="submit" class="login-btn-entrar">Entrar</button>
+      </form>
+
+      <button id="login-invitado" class="login-btn-invitado">Continuar sin iniciar sesión</button>
+    </div>
+  </div>
+
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+    <button id="btn-menu" class="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+    <h1 class="logo">Sushi Mochi</h1>
+  </header>
+
+  <!-- MENÚ DESLIZABLE -->
+  <div id="fondo" class="fondo" hidden></div>
+  <nav id="menu" class="menu" aria-label="Menú del restaurante" aria-hidden="true">
+    <button id="btn-cerrar" class="btn-cerrar" aria-label="Cerrar menú">✕</button>
+
+    <h2>Menú</h2>
+
+    <section>
+      <h3>Clásicos</h3>
+      <ul>
+        <li><a href="#">Platillo 1</a></li>
+        <li><a href="#">Platillo 2</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Mar y Tierra</h3>
+      <ul>
+        <li><a href="#">Platillo 1</a></li>
+        <li><a href="#">Platillo 2</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Bebidas</h3>
+      <ul>
+        <li><a href="#">Fuze Tea</a></li>
+        <li><a href="#">Coca-Cola</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Combos</h3>
+      <ul>
+        <li><a href="#combos">Combo 1 · sushi + fritos + bebida</a></li>
+        <li><a href="#combos">Combo 2 · 2 tipos de sushi</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section class="personaliza">
+      <h2>¡Personaliza tu sushi!</h2>
+
+      <p class="contador">Ingredientes elegidos: <strong id="contador">0</strong> de 5</p>
+
+      <div class="ingredientes">
+        <button class="ingrediente" data-nombre="Aguacate">Aguacate</button>
+        <button class="ingrediente" data-nombre="Camarón">Camarón</button>
+        <button class="ingrediente" data-nombre="Queso crema">Queso crema</button>
+        <button class="ingrediente" data-nombre="Carne res">Carne res</button>
+        <button class="ingrediente" data-nombre="Fritos">Fritos</button>
+        <button class="ingrediente" data-nombre="Fríos">Fríos</button>
+        <button class="ingrediente" data-nombre="Salmón">Salmón</button>
+
+        <aside class="aviso">
+          Solo puedes tener 5 ingredientes.
+          <span>Los adicionales tienen costo extra.</span>
+        </aside>
+      </div>
+    </section>
+
+    <section id="combos" class="combos">
+      <h2>Combos</h2>
+      <div class="combos-lista">
+        <article class="combo">
+          <h3>Combo 1</h3>
+          <p>Sushi + fritos + bebida</p>
+          <button>Elegir</button>
+        </article>
+        <article class="combo">
+          <h3>Combo 2</h3>
+          <p>2 tipos de sushi</p>
+          <button>Elegir</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
